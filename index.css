@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "Asap Condensed", sans-serif;
+      font-weight: lighter;
+}
+/* Defining our Root Selectors */
+:root{
+    --clr-blue: rgb(0, 112, 186);
+    --clr-white: #fff;
+    --clr-ash-blue: #4848b2;
+    --clr-black: #000;
+    --clr-gray: #f1f1f1;
+}
+
+/* Menu */
+.menu{
+    display: inline-flex;
+    background: var(--clr-white);
+    /* box-shadow: 0 0 5px var(--clr-black); */
+    width: 100%;
+    padding: 20px 15px;
+}
+.logo{
+    position: relative;
+    left: 30px;
+}
+logo{
+    width: 150px;
+    position: relative;
+    top: -40px;
+    height: auto;
+    /* I observed that the image has default height that is causing
+    it to take more height than other elements so I reduced it's 
+    height by manually cropping it */
+    /* height: 100px; */
+}
+.personal{
+    position: relative;
+    left: 370px;
+    height: 30px;
+}
+.personal:hover > .options{
+    display: block;
+}
+.login{
+    position: relative;
+    left: 800px;
+}
+.login button{
+    margin: 0 10px;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+#signup{
+    background: var(--clr-blue);
+    border: none;
+    border-radius: 20px;
+    color: var(--clr-white);
+}
+#login{
+    background: transparent;
+    border: 2px solid var(--clr-blue);
+    border-radius: 20px;
+}
+.options{
+    background: var(--clr-ash-blue);
+    color: var(--clr-white);
+    position: absolute;
+    padding: 10px;
+    top: 70px;
+    left: -670%;
+    display: none;
+    min-width: 1444px;
+}
+/* Use these styles to position the options Divs properly */
+.optionsmain, .options2{
+    /* display: inline-flex; */
+    margin: 1px 150px;
+}
+.optionsmain, .options2{
+    /* background: var(--clr-black); */
+    display: inline-flex;
+}
+.optionsmain div, .options2 div{
+    margin: 10px 40px;
+    line-height: 1.5;
+}
+.optionsmain div h3, .options2 div h3{
+    font-size: 1.5rem;
+}
+.deals{
+    position: relative;
+    left: 40px;
+}
+
+
+
+.home{
+    background: linear-gradient(rgb(20, 20, 20, 0.4), rgb(20, 20,20, 0.5)),
+    url(https://plus.unsplash.com/premium_photo-1661295647050-93d89ddfa6b6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbiUyMGhvbGRpbmclMjBwaG9uZXxlbnwwfDB8MHx8fDA%3D)
+    no-repeat center/cover;
+    min-height: 60vh;
+    color: var(--clr-white);
+}
+.homeContents{
+    text-align: center;
+    padding: 170px 0 0 0;
+    position: relative;
+    top: -50px;
+}
+.homeContents h2{
+    font-size: 3rem;
+    margin: 20px 0;
+    font-weight: lighter;
+}
+.buttonHome button{
+    background: var(--clr-blue);
+    color: var(--clr-white);
+    border: none;
+    width: 30%;
+    border-radius: 50px;
+    padding: 20px ;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.homeContents button:hover{
+    background: var(--clr-ash-blue);
+    cursor: pointer;
+    transition: .5s;
+}
+.homeContents p{
+    margin: 20px 0 0 0;
+    word-spacing: 2px;
+}
+.homeContents p strong{
+   font-weight: 700;
+}
+/* All */
+.all{
+    margin: 35px 0;
+    text-align: center;
+
+}
+.all h2, .buy-sell h2, .paypalJoin h2{
+    font-weight: lighter;
+    font-size: 3rem;
+    text-align: center;
+}
+.individuals{
+    margin: 20px 0;
+    line-height: 2;
+}
+.individuals h3{
+    font-weight: lighter;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+}
+.individuals p{
+    font-size: 1.1rem;
+}
+.individuals button{
+    padding: 20px 80px;
+    border: 2px solid var(--clr-blue);
+    background: transparent;
+    border-radius: 50px;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transform: transition background-color 0.9s ease-in-out, color 0.9s ease-in-out;
+}
+.individuals button:hover{
+    transition: .5s ease;
+    background: var(--clr-blue);
+    color: #fff;
+    transform: scale(1.1);
+}
+/* Buy and Sell Section */
+.buy-sell{
+    margin: 90px 0 0 0;
+    padding: 40px 0;
+    background: var(--clr-gray);
+    text-align: center;
+}
+#buyer{
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    margin: 30px 0 0 0;
+}
+.buyImages{
+    display: inline-flex;
+    margin: 45px 0;
+}
+.buyImages div button{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    top: 5px;
+    left: -270px;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.buyImages div span{
+    position: relative;
+    top: 20px;
+    /* left: -250px; */
+}.buyImages div{
+    margin: 10px 70px;
+}
+.buyImages div p{
+    font-size: 1.4rem;
+}
+/* Join */
+.paypalJoin{
+    padding: 70px 40px;
+    background: var(--clr-ash-blue);
+    color: var(--clr-white);
+}
+.joinContents{
+    display: inline-flex;
+    margin: 70px 0 0 0;
+    line-height: 2;
+}
+.joinContents h3{
+    font-size: 1.9rem;
+}
+.left{
+    position: relative;
+    left: 200px;
+}
+.right{
+    position: relative;
+    left: 300px;
+}
